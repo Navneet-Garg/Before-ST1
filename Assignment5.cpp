@@ -60,8 +60,8 @@ public:
 int main()
 {
     // Initialize User objects
-    User User1Obj("Alice", 1990, 1, 1, 50000.0);
-    User User2Obj("Bob", 1992, 1, 1, 60000.0);
+    User User1Obj("navii", 1990, 1, 1, 50000.0);
+    User User2Obj("parth", 1992, 1, 1, 60000.0);
 
     // Compare users by age
     bool result = User1Obj == User2Obj;
