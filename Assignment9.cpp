@@ -4,34 +4,33 @@ using namespace std;
 class Binary_sum
 {
 private:
-    int x;
-    int y;
+    int a;
+    int b;
 
 public:
-    Binary_sum(int x = 0, int y = 0) : x(x), y(y) {}
+    Binary_sum(int x = 0, int y = 0) : a(x), b(y) {}
 
-    friend Binary_sum operator+(Binary_sum &p1, Binary_sum &p2);
+    friend Binary_sum operator-(Binary_sum &p1, Binary_sum &p2);
 
     void display() const
     {
-        cout << x << " " << y;
+        cout << a << " " << b;
     }
 };
 
-Binary_sum operator+(Binary_sum &p1, Binary_sum &p2)
+Binary_sum operator-(Binary_sum &obj1, Binary_sum &obj2)
 {
     Binary_sum result;
-    result.x = p1.x + p2.x;
-    result.y = p1.y + p2.y;
+    result.a = obj1.a - obj2.a;
+    result.b = obj1.b - obj2.b;
     return result;
 }
-
 int main()
 {
-    Binary_sum p1(2, 3);
-    Binary_sum p2(4, 5);
+    Binary_sum obj1(12, 20);
+    Binary_sum obj2(2, 6);
 
-    Binary_sum sum = p1 + p2;
+    Binary_sum sum = obj1 - obj2;
 
     cout << "Sum is ";
     sum.display();
